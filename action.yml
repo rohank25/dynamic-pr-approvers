@@ -1,0 +1,12 @@
+name: 'dynamic-pr-approvers'
+description: 'Check pull request diff, and add github team as a reviewer based on content'
+author: 'rohank25'
+inputs:
+  github-token:
+    description: 'token to use to run action'
+  sre-list:
+    description: 'keywords to watch out for to add SRE team as reviewers to the PR. use | as delimiter. Optional.'
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
